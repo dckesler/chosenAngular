@@ -15,7 +15,7 @@
             },
             link: function(scope, elem, attrs){
                 var vm = scope.multiAuto;
-
+                console.log(vm.selectValues);
                 $timeout(function(){
                     var optionObj = {};
                     if(vm.maxChoices){
@@ -55,7 +55,7 @@
             transclude: true,
             template:
             '<form ng-submit="multiAuto.call()">'+
-                '<select class="chosen-select" multiple ng-model="multiAuto.inputField" id="multiAutoInput" ng-options="option for option in multiAuto.selectValues">' +
+                '<select class="chosen-select" multiple ng-model="multiAuto.inputField" id="multiAutoInput" ng-options="option.value as option.label group by option.group for option in multiAuto.selectValues | orderBy:[\'group\',\'label\']">' +
                 '</select>' +
             '</form>' +
             '<div style="display:inline-block" ng-transclude ng-click="multiAuto.call()"></div>'
