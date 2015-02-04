@@ -3,7 +3,7 @@ A angular directive for the Chosen jQuery plugin.
 
 
 ### Example
-```
+```js
 angular.module("yourApp", []).controller("yourCtrl", yourCtrl)
 function yourCtrl(){
   var vm = this;
@@ -14,6 +14,8 @@ function yourCtrl(){
     console.log(results)
   }
 }
+```
+```html
 <div ng-controllerAs="yourCtrl as ctrl">
   <multi-auto call-func="ctrl.exampleFunc" select-values="ctrl.exampleList" max-choices="3" box-width="500px"       no-result-text="Nuthin" placeholder-text="Look for stuff">
     <button>Click Me</button>
