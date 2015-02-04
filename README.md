@@ -7,7 +7,7 @@ A angular directive for the [Chosen jQuery plugin](http://harvesthq.github.io/ch
 angular.module("yourApp", []).controller("yourCtrl", yourCtrl)
 function yourCtrl(){
   var vm = this;
-  vm.exampleList = ['my', 'very', 'energetic', 'mother', 'just', 'served', 'us', 'nine', undefined];
+  vm.exampleList = [{label: "Label", value: "Value", group: "Group One"}, {label: "Label 2", value: "Value 2", group: "Group Two"}];
   vm.exampleFunc = exampleFunc;
   
   function exampleFunc(results){
@@ -23,4 +23,5 @@ function yourCtrl(){
 </div>
 ```
 
-This would create a chosen select box with exampleList as the options, has a placeholder of "Look for stuff", says "Nuthin" if no results match the input, has a maximum of 3 things selected at a time, is 500px long, transcludes the button with "Click Me" underneath the select box, and runs exampleFunc on the parent controller on submit or when the transcluded button is clicked.
+This would create a chosen select box with the options that appear as the label properties of the exampleList, grouped by the group properties, and with the value properties as the actual values of what one selects.
+It also has a placeholder of "Look for stuff", says "Nuthin" if no results match the input, has a maximum of 3 things selected at a time, is 500px long, transcludes the button with "Click Me" underneath the select box, and runs exampleFunc on the parent controller on submit or when the transcluded button is clicked.
