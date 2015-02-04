@@ -1,5 +1,5 @@
 # chosenAngular
-A angular directive for the Chosen jQuery plugin.
+A angular directive for the [Chosen jQuery plugin](http://harvesthq.github.io/chosen/options.html)Chosen jQuery plugin.
 
 
 ### Example
